@@ -1,0 +1,46 @@
+# Portfolio de Margareth Servius
+
+Bienvenue sur mon portfolio professionnel en ligne.  
+Ce projet présente mon profil, mes compétences, mes projets, mes certifications et mon CV.
+
+---
+
+## 📄 Contenu du dépôt
+
+- **index.html** : Page principale du portfolio  
+- **Marga.jpg** : Photo de profil  
+- **attestation.jpeg** : Attestation  
+- **certificat.jpeg** : Certificat  
+- **badge.jpeg** : Badge  
+- **CV.pdf** : Mon curriculum vitae
+
+---
+
+## 🌐 Liens de contact
+
+- [WhatsApp](https://wa.me/50932589301)  
+- [LinkedIn](https://www.linkedin.com/in/margareth-servius-1189ba337)  
+- [Email](mailto:mamankellan03@gmail.com)
+
+---
+
+## 🚀 Déploiement
+
+Ce portfolio est hébergé via **GitHub Pages** :  
+[https://Margareth025.github.io/portfolio/](https://Margareth025.github.io/portfolio/)
+
+---
+
+## 💡 Technologies utilisées
+
+- HTML / CSS / JavaScript  
+- Responsive design  
+- Animation de fond avec particules interactives  
+- Portfolio bilingue (Français / Anglais)
+
+---
+
+## 📌 Notes
+
+- Tous les fichiers sont **dans le même dossier** pour garantir que les images et le CV fonctionnent correctement.  
+- Pour mettre à jour le portfolio, il suffit de **modifier les fichiers dans le dépôt** et GitHub Pages publiera automatiquement les changements.
