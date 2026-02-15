@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margareth Servius | Portfolio Premium International</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#061722;color:white;overflow-x:hidden;transition:.4s;position:relative;}
+html{scroll-behavior:smooth;}
+
+/* CANVAS PARTICULES */
+#bgCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;}
+
+/* CONTAINER PRINCIPAL */
+.main-container{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;padding:60px 5%;}
+
+/* SECTION CONTENU */
+.content{flex:1 1 600px;display:flex;flex-direction:column;gap:60px;}
+
+/* HERO */
+.hero{display:flex;flex-direction:column;gap:30px;}
+.hero-inner{display:flex;align-items:center;gap:30px;flex-wrap:wrap;}
+.hero h1{font-size:55px;font-weight:800;animation:fadeIn 1.5s ease-in-out;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);} }
+.badge{display:inline-block;margin-top:15px;padding:8px 20px;background:linear-gradient(90deg,#00e5ff,#00ffa3);color:black;font-weight:700;border-radius:25px;font-size:12px;box-shadow:0 0 20px rgba(0,255,200,0.6);animation:pulse 2s infinite;}
+@keyframes pulse{0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);}}
+.profile-img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:4px solid #00e5ff;box-shadow:0 0 40px rgba(0,229,255,0.5);transition:.4s;}
+.profile-img:hover{transform:scale(1.05);}
+.btn{display:inline-block;margin-top:15px;padding:12px 30px;background:#00e5ff;color:black;border-radius:40px;font-weight:600;text-decoration:none;transition:.3s;}
+.btn:hover{transform:scale(1.1);}
+
+/* SECTIONS */
+section{opacity:1; transform:translateY(0);}
+h2{font-size:28px;margin-bottom:15px;color:#00e5ff;}
+
+/* GRID CARDS */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card{background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);padding:20px;border-radius:20px;border:1px solid rgba(255,255,255,0.1);transition:.4s;}
+.card:hover{transform:translateY(-8px);border-color:#00e5ff;}
+ul{list-style:none;line-height:1.8;}
+img.card-img{width:100%;border-radius:15px;}
+
+/* CONTACT */
+.contact{flex:0 0 250px;background:rgba(0,0,0,0.4);backdrop-filter:blur(10px);border-radius:20px;padding:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:sticky;top:60px;height:max-content;}
+.contact h2{margin-bottom:25px;}
+.contact a{display:inline-block;margin:10px;padding:12px 25px;border-radius:30px;font-weight:600;text-decoration:none;transition:.3s;}
+.contact a.whatsapp{background:#25D366;color:white;}
+.contact a.linkedin{background:#0077B5;color:white;}
+.contact a.email{background:#00e5ff;color:black;}
+.contact a:hover{transform:scale(1.05);}
+
+/* FOOTER */
+footer{text-align:center;padding:40px;background:#041018;opacity:.7;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+.main-container{flex-direction:column;}
+.contact{flex:1 1 auto;position:relative;top:0;width:100%;}
+.hero-inner{flex-direction:column;text-align:center;}
+.profile-img{margin-top:20px;}
+}
+</style>
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+
+<div class="main-container">
+  <!-- CONTENU PRINCIPAL -->
+  <div class="content">
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <img src="Marga.jpg" class="profile-img">
+        <div>
+          <h1>Margareth Servius</h1>
+          <p id="subtitle">Technicienne Réseau | Développeuse | Innovatrice Tech</p>
+          <div class="badge" id="badge">Disponible pour opportunité internationale</div>
+          <a href="CV.pdf" class="btn">Télécharger CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 id="aboutTitle">À propos</h2>
+      <p id="aboutText">
+      Diplômée de Haïti Tec, certifiée CCNA 1,2,3, systèmes d'exploitation Linux et Windows, développement web, applications Android, base de données et électronique.  
+      Fondatrice du projet <strong>Bionik Ayiti</strong>, qui conçoit des prothèses intelligentes et solutions robotiques pour Haïti.  
+      Participation aux concours <strong>HAIFEX 2025</strong> et <strong>CCIHC 2026</strong>.  
+      Compétences solides en innovation, leadership et résolution de problèmes.
+      </p>
+    </section>
+
+    <section id="formation">
+      <h2>Formation</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Haïti Tec</h3>
+          <p>Diplôme en Technique Informatique</p>
+          <p>Spécialisation : Réseaux & Développement</p>
+          <p>Année : 2025</p>
+        </div>
+        <div class="card">
+          <h3>Certifications</h3>
+          <ul>
+            <li>CCNA 1 – Introduction aux Réseaux</li>
+            <li>CCNA 2 – Switching & Routing</li>
+            <li>CCNA 3 – Enterprise Networking & Security</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projets</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Bionik Ayiti</h3>
+          <p>Projet d’innovation sociale et technologique. Conception de prothèses robotisées pour améliorer l’autonomie des personnes handicapées.</p>
+          <p>Rôle : Développement logiciel, électronique, prototypage, coordination d’équipe.</p>
+        </div>
+        <div class="card">
+          <h3>Concours HAIFEX 2025</h3>
+          <p>Présentation d’une solution technologique innovante.</p>
+        </div>
+        <div class="card">
+          <h3>CCIHC 2026</h3>
+          <p>Développement et pitch de projet entrepreneurial.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 id="skillsTitle">Compétences</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Systèmes</h3>
+          <ul>
+            <li>Linux (Administration & CLI)</li>
+            <li>Windows (Configuration & Support)</li>
+            <li>Gestion utilisateurs</li>
+            <li>Administration système</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Réseaux (CCNA)</h3>
+          <ul>
+            <li>Configuration Routeurs & Switch</li>
+            <li>Adressage IP & Subnetting</li>
+            <li>VLAN & Routing</li>
+            <li>Sécurité réseau</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Développement Web & Applications</h3>
+          <ul>
+            <li>HTML / CSS / JavaScript</li>
+            <li>Applications Web</li>
+            <li>API REST</li>
+            <li>Développement Android</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Base de Données</h3>
+          <ul>
+            <li>MySQL</li>
+            <li>SQL</li>
+            <li>Modélisation</li>
+            <li>Gestion de données</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Électronique & Robotique</h3>
+          <ul>
+            <li>Circuits électroniques</li>
+            <li>Microcontrôleurs</li>
+            <li>Capteurs & actionneurs</li>
+            <li>Prototypage</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Santé & Sécurité</h3>
+          <ul>
+            <li>Prévention des risques</li>
+            <li>Normes SST</li>
+            <li>Organisation sécuritaire</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOUVELLE SECTION CERTIFICATIONS & BADGES -->
+    <section id="certifications">
+      <h2>Certifications & Badges</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="attestation.jpeg" alt="Attestation" class="card-img">
+          <p>Attestation</p>
+        </div>
+        <div class="card">
+          <img src="certificat.jpeg" alt="Certificat" class="card-img">
+          <p>Certificat</p>
+        </div>
+        <div class="card">
+          <img src="badge.jpeg" alt="Badge" class="card-img">
+          <p>Badge</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CONTACT À DROITE -->
+  <div class="contact">
+    <h2 id="contactTitle">Contact</h2>
+    <a href="https://wa.me/50932589301" target="_blank" class="whatsapp">WhatsApp</a>
+    <a href="https://www.linkedin.com/in/margareth-servius-1189ba337" target="_blank" class="linkedin">LinkedIn</a>
+    <a href="mailto:mamankellan03@gmail.com" class="email">Email</a>
+  </div>
+</div>
+
+<footer>
+© 2026 Margareth Servius — Portfolio Premium
+</footer>
+
+<script>
+
+
+// PARTICULES BLEUES
+const canvas=document.getElementById('bgCanvas');
+const ctx=canvas.getContext('2d');
+let width=canvas.width=window.innerWidth;
+let height=canvas.height=window.innerHeight;
+const particles=[]; const particleCount=120;
+class Particle{constructor(){this.reset();}
+reset(){this.x=Math.random()*width; this.y=Math.random()*height; this.size=Math.random()*2+1; this.speedX=(Math.random()-0.5)*0.5; this.speedY=(Math.random()-0.5)*0.5; this.opacity=Math.random();}
+update(){this.x+=this.speedX; this.y+=this.speedY; if(this.x<0||this.x>width||this.y<0||this.y>height)this.reset();}
+draw(){ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fillStyle=`rgba(0,174,239,${this.opacity})`; ctx.fill();}}
+for(let i=0;i<particleCount;i++) particles.push(new Particle());
+function animate(){ctx.clearRect(0,0,width,height); particles.forEach(p=>{p.update(); p.draw();}); requestAnimationFrame(animate);}
+animate();
+window.addEventListener('resize',()=>{width=canvas.width=window.innerWidth;height=canvas.height=window.innerHeight;});
+</script>
+
+</body>
+</html>
